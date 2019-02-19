@@ -1,0 +1,22 @@
+bin/kafka-topics.sh --create \
+    --zookeeper localhost:2181 \
+    --replication-factor 1 \
+    --partitions 1 \
+    --topic KeyLessTopic
+    
+ 
+cat topics-to-move.json
+{"name":"John", "exp":16}
+{"name":"Finn", "exp":20}
+{"name":"Cylin", "exp":18}
+{"name":"Mark", "exp":2}
+{"name":"Akshay", "exp":14}
+
+kafka/bin/kafka-console-consumer.sh \
+    --bootstrap-server localhost:9092 \
+    --topic KeyLessTopic \
+    --from-beginning
+
+
+
+
