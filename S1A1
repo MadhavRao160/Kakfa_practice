@@ -5,7 +5,7 @@ bin/kafka-topics.sh --create \
     --topic KeyLessTopic
     
  
-cat topics-to-move.json
+cat KeyLessTopic
 {"name":"John", "exp":16}
 {"name":"Finn", "exp":20}
 {"name":"Cylin", "exp":18}
